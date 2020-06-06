@@ -1,0 +1,49 @@
+{
+  "name": "new_payme_gate",
+  "version": "1.0.0",
+  "description": "back end app for gate ",
+  "main": "index.js",
+  "scripts": {
+    "migrate_database": "npx sequelize-cli db:migrate ",
+    "seed_database": "npx sequelize-cli db:seed:all",
+    "tsc": "tsc",
+    "dev": "NODE_ENV=development  ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "build": "NODE_ENV=production tsc &&  sudo cp -r src/views/ build/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bluebird": "^3.5.27",
+    "@types/cron": "^1.7.1",
+    "@types/express": "^4.16.1",
+    "@types/node": "^12.12.26",
+    "@types/validator": "^10.11.1",
+    "axios": "^0.16.2",
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cron": "^1.7.2",
+    "crypto-js": "^4.0.0",
+    "custom-env": "^1.0.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "mysql2": "^1.7.0",
+    "sequelize": "^5.21.4",
+    "sequelize-cli": "^5.5.0",
+    "ts-sequelize-models": "^1.2.2",
+    "typescript": "^3.7.5",
+    "validator": "^11.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.5",
+    "nodemon": "^1.19.1",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^8.3.0",
+    "ts-node-dev": "^1.0.0-pre.44"
+  }
+}
