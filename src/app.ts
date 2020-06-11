@@ -1,8 +1,6 @@
 import express = require("express");
 import bodyParser = require("body-parser");
 import { RouteBase } from "./Core/routes/RouteBase";
-import { ICronJob } from "./CronJobs/ICronJob";
-// import { VoucherExpiredNotify } from "./CronJobs/VoucherExpiredNotify";
 var cors = require("cors");
 
 
@@ -13,9 +11,6 @@ export class App {
         this.app = express();
         this.initializeMiddlewares();
         this.initializeRoute(Route);
-        this.runCronJobs([
-            // new VoucherExpiredNotify()
-        ])
     }
     /**
      * @description server listen method to givin port
@@ -26,14 +21,7 @@ export class App {
             console.log(`App listening on the port ${port}`);
         });
     }
-    /**
-     * run all cron jobs
-     */
-    private async runCronJobs(cronJobs : ICronJob[]){
-        for (const cronJob of cronJobs) {
-            await cronJob.run()
-        }
-    }
+
     /**
      * @description return app after all intializtions
      */

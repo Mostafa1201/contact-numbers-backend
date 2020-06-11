@@ -1,18 +1,19 @@
 import { EntityBase } from "../Core/Entity/EntityBase";
 import { DataTypes } from "../Core/models/DataTypes/DataTypes";
 
-export class MangaEntity extends EntityBase {
+export class ContactEntity extends EntityBase {
     attributes: { [key: string]: DataTypes } = {
         id : DataTypes.id,
-        rank : DataTypes.int,
-        score: DataTypes.float,
-        date: DataTypes.string,
-        showId: DataTypes.int,
+        name : DataTypes.string,
+        phone: DataTypes.string,
+        address: DataTypes.string,
+        notes: DataTypes.string,
         createdAt : DataTypes.date,
         updatedAt : DataTypes.date,
+        deletedAt : DataTypes.date,
     }  
     
-    entityName: string = 'mangas';
+    entityName: string = 'contacts';
     constructor(){
         super()
     }

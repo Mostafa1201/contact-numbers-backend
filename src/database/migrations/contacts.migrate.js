@@ -1,6 +1,6 @@
 module.exports = {
     up: (queryInterface, Sequelize) => {
-      return queryInterface.createTable('shows', {
+      return queryInterface.createTable('contacts', {
             id : {
                 allowNull: false,
                 autoIncrement: true,
@@ -8,14 +8,15 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             name : Sequelize.STRING,
-            image: Sequelize.STRING,
-            showType: Sequelize.STRING,
+            phone: Sequelize.STRING,
+            address: Sequelize.STRING,
+            notes: Sequelize.STRING,
             createdAt : Sequelize.DATE,
             updatedAt : Sequelize.DATE,
             deletedAt : Sequelize.DATE,
       });
     },
     down: (queryInterface, Sequelize) => {
-      return queryInterface.dropTable('shows');
+      return queryInterface.dropTable('contacts');
     }
   };

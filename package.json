@@ -37,7 +37,8 @@
     "validator": "^11.1.0",
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.5",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "@types/shelljs": "^0.8.5",
